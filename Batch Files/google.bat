@@ -1,1 +1,2 @@
-@py.exe "C:\Users\SCO941\OneDrive - AdventHealth\Documents\Github\Automate-the-Boring-Stuff\Chapter 11\google.py" %*
+@py.exe "C:\Search-Tools\google.py" %*
+pause

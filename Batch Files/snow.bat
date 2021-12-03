@@ -1,1 +1,1 @@
-@py.exe "C:\Users\SCO941\OneDrive - AdventHealth\Documents\Github\Automate-the-Boring-Stuff\Chapter 11\snow.py" %*
+@py.exe "C:\Search-Tools\snow.py" %*

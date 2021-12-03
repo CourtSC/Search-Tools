@@ -1,5 +1,5 @@
 #! python3
-#!mapIt.py - Launches a google search from the command line or clipboard
+#! google.py - Launches a google search from the command line or clipboard
 #! https://www.google.com/search?q=
 
 import webbrowser, sys, pyperclip

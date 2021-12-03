@@ -1,1 +1,1 @@
-@py.exe "C:\Users\SCO941\OneDrive - AdventHealth\Documents\Github\Automate-the-Boring-Stuff\Chapter 11\ddbSearch.py" %*
+@py.exe "C:\Search-Tools\ddbSearch.py" %*
