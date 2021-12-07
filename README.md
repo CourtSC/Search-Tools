@@ -8,9 +8,13 @@ Installation:
 
 2: Download this repository and unpack it to the root of your C:\ drive.
 
-3: Run setup.py.
+3: Open powershell and run the following command:
 
-4: Reboot.
+    pip install -r C:\Search-Tools\packages.md
+
+4: Run setup.py.
+
+5: Reboot.
 
 Usage:
 
