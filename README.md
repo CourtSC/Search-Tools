@@ -4,9 +4,13 @@ Uses Python 3 and bat files to search various websites directly from the start m
 
 Installation:
 
-1: Run setup.ps1.
+1: Install newest version of python from https://www.python.org/
 
-2: Reboot.
+2: Download this repository and unpack it to the root of your C:\ drive.
+
+3: Run setup.py.
+
+4: Reboot.
 
 Usage:
 
