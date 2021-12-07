@@ -2,7 +2,7 @@
 #! setup.py - Moves Batch Files to C:\Windows so the modifying the PATH variable is no longer necessary.
 
 from pathlib import Path
-import os, shutil, pyuac
+import os, shutil, pyuac, sys
 
 if not pyuac.isUserAdmin():
     pyuac.runAsAdmin()
