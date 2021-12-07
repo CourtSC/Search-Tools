@@ -1,9 +1,20 @@
-Start-Process powershell -verb runAs -ArgumentList "-file C:\Search-Tools\installScript.ps1"
+# Install Nuget
+Register-PackageSource -Name Nuget -Location "http://www.nuget.org/api/v2" -ProviderName Nuget -Trusted
+
+# Install the latest version of Python without admin privileges
+find-package python | install-package -Scope CurrentUser
+
+[System.Environment]::GetEnvironnmentVariable('PATH','machine') > C:\backup-path.txt
+$INCLUDE = "C:\Search-Tools\Batch Files"
+$OLDPATH = [System.Environment]::GetEnvironnmentVariable('PATH','machine')
+$NEWPATH = "$OLDPATH;$INCLUDE"
+[Environment]::SetEnvironmentVariable("PATH", "$NEWPATH", "Machine")
+
 # SIG # Begin signature block
 # MIIR2wYJKoZIhvcNAQcCoIIRzDCCEcgCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUr58pFZFrBrDMsa6XWNL2tssc
-# 5JCggg1BMIIDBjCCAe6gAwIBAgIQWasynIDMxLNN/NolJxnNcTANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUwP67cLOVDFUcteQ9qhyd4KVl
+# NR+ggg1BMIIDBjCCAe6gAwIBAgIQWasynIDMxLNN/NolJxnNcTANBgkqhkiG9w0B
 # AQsFADAbMRkwFwYDVQQDDBBBVEEgQXV0aGVudGljb2RlMB4XDTIxMTIwNzE5NDgz
 # NVoXDTIyMTIwNzIwMDgzNVowGzEZMBcGA1UEAwwQQVRBIEF1dGhlbnRpY29kZTCC
 # ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKJkxCC1uoNd9zjwOi4u+NOU
@@ -77,23 +88,23 @@ Start-Process powershell -verb runAs -ArgumentList "-file C:\Search-Tools\instal
 # AQEwLzAbMRkwFwYDVQQDDBBBVEEgQXV0aGVudGljb2RlAhBZqzKcgMzEs0382iUn
 # Gc1xMAkGBSsOAwIaBQCgeDAYBgorBgEEAYI3AgEMMQowCKACgAChAoAAMBkGCSqG
 # SIb3DQEJAzEMBgorBgEEAYI3AgEEMBwGCisGAQQBgjcCAQsxDjAMBgorBgEEAYI3
-# AgEVMCMGCSqGSIb3DQEJBDEWBBTRTRj58Oy8BPHEtcgogrHGHDDF7TANBgkqhkiG
-# 9w0BAQEFAASCAQCJx52akNsLW1dM+hUp2igmZ0XtYTLNZWhsC53dxVqTY2S2wrDn
-# smgEXmNgJqdpVN3e6zttoubMZcKl3yIy4tTSq4av9eDWYd0tMoOmEOx2csnRrez1
-# K6XAttyJJIDfeSZGChfyExpstu1H8Npq0/vgO63OKQK4TV2dBc5TsHR/O0aCI+bI
-# XDqQmyce4h8baWzRlgJ3J7cTmEik01Uy9vtBS5r47zNv9gFWC8HgIqU5KrC8v6/1
-# anfjWrZLZHRrhOnKZ5/ahL3SFxaSs9xjErkb1Oe3WpC9caiMCQVyaoYx9Nj5a6iO
-# iXNAekHj0tc0en3Exi0aNk2HQVC3cIVz06xloYICMDCCAiwGCSqGSIb3DQEJBjGC
+# AgEVMCMGCSqGSIb3DQEJBDEWBBQsLKS6kcaBFhDhpfNCK3yVEziaYzANBgkqhkiG
+# 9w0BAQEFAASCAQAkci75yJpYkmEodqA/oO3nh1SXm5/NBZqeGhYC2Q3AXXUkfVl5
+# 0GNXZp8NJKAs40+3kohbBj0rAsPRfbzZwD+pi+IP/Xcoh1OlLd7+wQf1Q5nIvlYE
+# W6c1lmSX5RLgo7hC3zracF34+B7aaD9GiS7eSNbFLjlP+EAqcusSZW/L/tUU7imO
+# xlNljXYT3+bnY6GlqtDvBmMojfdYusU9+m1/GEU69no2gbZCEynTi6iSqLeYSkAR
+# h+c/xURwYJaulgGZERKP9M9zCZhHZKsOtNo4REQYUqpLUt6MjulyELsg+RtYJgoT
+# rqRLZokJvpWu+Fi2iCCGOaXr4ljZjlBt0mX5oYICMDCCAiwGCSqGSIb3DQEJBjGC
 # Ah0wggIZAgEBMIGGMHIxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJ
 # bmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xMTAvBgNVBAMTKERpZ2lDZXJ0
 # IFNIQTIgQXNzdXJlZCBJRCBUaW1lc3RhbXBpbmcgQ0ECEA1CSuC+Ooj/YEAhzhQA
 # 8N0wDQYJYIZIAWUDBAIBBQCgaTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwG
-# CSqGSIb3DQEJBTEPFw0yMTEyMDcyMDAyMzhaMC8GCSqGSIb3DQEJBDEiBCA08YBb
-# daDBeD55EIJlKE8IeDMlVWDs2uC8jRKbs47l3zANBgkqhkiG9w0BAQEFAASCAQCp
-# rKPq5CHKgZ/T4OzEAngEYGqgw5n6b2daRUSnAbJjnD3+eZ3oJoaq0iP3YHsJApNB
-# +hwdpVmh8TxB74FkZSI5qonfT8LRzVY+GyY+a8Xfo0t/LHZHOCzSzVPUME+fnqgM
-# YMtQ6lb6rAauTCDAeg/1zFuva/7YEHmntJk0r4dDmjZYR1zHfHcj29NdGjj+s2Wi
-# wZoTLN1u5QPY1JRmKuq9Bg0bU0zBTUnqY+lpmXY1VxeZd6B4PhkqlG08J3XYLSIv
-# qzMmRFaBpjDb8SF+J3pwMy/KPUDGikzo9wCXhvRFsYnBDMpoCF/edrchua5E5ZZP
-# lZWTvXBfnlq572b9YT5I
+# CSqGSIb3DQEJBTEPFw0yMTEyMDcyMDA5NTZaMC8GCSqGSIb3DQEJBDEiBCAXqOdf
+# jydqGrkUPgJhABuWcARRo+QdTA9iliBUrrGUVDANBgkqhkiG9w0BAQEFAASCAQCr
+# fYiQTsxjnGIw4hvUbwqA375o/tO/LGTeIa+cs3i/iuOyjcJk3s7Glr9CwXDkHk1s
+# cKDCEmcfdASy1Xk0Xh8aV87XLW9glYN4LezpoR31+CX3GJVdnoNj4EQNN+50qbTB
+# YV0ym7GfvZ1yQ/bLCvhlnjsh/ftFrhH2ripY1QSOBJwGB2QNMaWp0FERMYh+3RMI
+# CmqSUZEgs6qtFIDgx8jpdjUKMkMZ4qoav2CaefcCE+ftOSbF4H6hF2N+2d7U5NuS
+# Pb/DplGp/5bTkHfbiUIsOAeydRvijA8QuozsOKE5ArEJBXWbbKskKXqWNVM9qqNL
+# FoqtFQ340/x6t6/MASjP
 # SIG # End signature block
