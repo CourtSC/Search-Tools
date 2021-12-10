@@ -4,7 +4,7 @@ Uses Python 3 and bat files to search various websites directly from the start m
 
 Installation:
 
-1: Install newest version of python from https://www.python.org/
+1: Install newest version of python from https://www.python.org/. Make sure to check the box to add Python to the PATH variable.
 
 2: Download this repository and unpack it to the root of your C:\ drive.
 
