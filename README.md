@@ -22,6 +22,10 @@ Enter one of the commands into the Start Menu or Run dialogue (Win + r) to searc
 
 If no args are provided, the program will use whatever is copied to your clipboard as the search term.
 
+"google hello" will open a new browser tab and search "hello" on google.com
+
+"google" will open a new browser tab and search whatever you have stored in your clipboard on google.com
+
 Commands:
 
 ddb - Searches DNDBEYOND
