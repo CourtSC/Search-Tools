@@ -7,7 +7,7 @@ import os, shutil, pyuac, sys
 if not pyuac.isUserAdmin():
     pyuac.runAsAdmin()
 
-p = Path('C:/Search-Tools/Batch Files')
+p = Path.home() / Path('Search-Tools/Batch Files')
 w = Path('C:/Windows')
 
 for i in os.listdir(p):

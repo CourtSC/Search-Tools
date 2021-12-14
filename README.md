@@ -6,7 +6,9 @@ Installation:
 
 1: Install newest version of python from https://www.python.org/. Make sure to check the box to add Python to the PATH variable.
 
-2: Download this repository and unpack it to the root of your C:\ drive.
+2: Download this repository and unpack it to your Home folder. This is the root of your profile. If you're not sure what that is, open File Explorer, select the address bar at the top of the window, type the following and press enter:
+
+    %HOMEPATH%
 
 3: Open powershell and run the following command:
 

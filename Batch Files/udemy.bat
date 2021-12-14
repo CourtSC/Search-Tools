@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\udemySearch.py" %*
+@py.exe "%HOMEPATH%\Search-Tools\udemySearch.py" %*

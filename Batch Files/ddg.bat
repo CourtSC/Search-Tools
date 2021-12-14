@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\duckDuckGoSearch.py" %*
+@py.exe "%HOMEPATH%\Search-Tools\duckDuckGoSearch.py" %*

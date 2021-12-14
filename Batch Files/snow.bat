@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\snow.py" %*
+@py.exe "%HOMEPATH%\Search-Tools\snow.py" %*
