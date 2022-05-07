@@ -1,1 +1,1 @@
-@py.exe "%USERPROFILE%\Search-Tools\mapIt.py" %*
+@py.exe "%HOMEPATH%\Search-Tools\mapIt.py" %*
