@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\luckySearch.py" %*
+@py.exe "%USERPROFILE%\Search-Tools\luckySearch.py" %*

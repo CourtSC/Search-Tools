@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\ddbSearch.py" %*
+@py.exe "%USERPROFILE%\Search-Tools\ddbSearch.py" %*

@@ -1,1 +1,1 @@
-@py.exe "C:\Search-Tools\google.py" %*
+@py.exe "%USERPROFILE%\Search-Tools\google.py" %*
