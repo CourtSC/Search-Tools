@@ -6,9 +6,9 @@ import sys, webbrowser, pyperclip
 
 if len(sys.argv) > 1:
     # Get search from args.
-    search = ' '.join(sys.argv[1:])
+    search = " ".join(sys.argv[1:])
 else:
     # Get search from clipboard.
     search = pyperclip.paste()
 
-webbrowser.open('https://www.dndbeyond.com/search?q=' + search)
+webbrowser.open("https://www.dndbeyond.com/search?q=" + search)
